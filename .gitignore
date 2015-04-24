@@ -44,3 +44,7 @@ Temporary Items
 
 *.suo
 *.sdf
+*.tlog
+Win32Project1/Debug/vc110.idb
+*.lastbuildstate
+GameEngine.opensdf
