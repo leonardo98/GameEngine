@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\Debug_vs2010;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\GameEngine\third_party\win32\libraries;C:\CppLib\SDL\VisualC\SDL\Win32\Release;C:\CppLib\SDL\VisualC\SDLmain\Win32\Release;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <LibraryPath>C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\Win32Project1\Debug_vs2010;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\GameEngine\third_party\win32\libraries;C:\CppLib\SDL\VisualC\SDL\Win32\Release;C:\CppLib\SDL\VisualC\SDLmain\Win32\Release;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
     <IncludePath>C:\CppLib\SDL\include;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\GameEngine\third_party\win32\pthreads\include;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\GameEngine\src;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -59,7 +59,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libjpeg.lib;libpng.lib;libzlib.lib;opengl32.lib;pthreadVCE2.lib;SDL2.lib;SDL2main.lib;oxygine_vs2010_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libjpeg.lib;libpng.lib;libzlib.lib;opengl32.lib;pthreadVCE2.lib;SDL2.lib;SDL2main.lib;Oxygine_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

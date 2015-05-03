@@ -1,7 +1,7 @@
 #include "oxygine-framework.h"
 //#include "Box2D/Box2D.h"
 //#include "Box2DDebugDraw.h"
-#include "reader/LevelSet.h"
+#include "buttons/TapButton.h"
 
 //using namespace oxygine;
 
@@ -199,6 +199,7 @@ void game_preinit(oxygine::core::init_desc *desc)
 	{
 		desc->w = 1064;
 		desc->h = 600;
+		desc->showDebugActor = false;
 #ifndef _DEBUG
 		desc->showDebugActor = false;
 #endif
@@ -206,12 +207,20 @@ void game_preinit(oxygine::core::init_desc *desc)
 	oxygine::core::setClearColor(oxygine::Color(0, 0, 127, 255));
 }
 
-class MainMenu : public LevelSet
+class MainMenu : public virtual TapButtonInterface
 {
 public:
+	virtual void TapEvent(const std::string &msg)
+	{
+		if (msg == "start")
+		{
+//			oxygine::getStage()->addChild(new MainMenu());
+		}
+	}
 	MainMenu()
 	{
 		LoadFromFile("interface/description/mainscreen.xml");
+		AddButton(*this, "start_btn", this, "start");
 	}
 };
 

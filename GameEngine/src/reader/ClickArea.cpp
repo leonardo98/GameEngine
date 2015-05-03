@@ -50,7 +50,7 @@ ClickArea::ClickArea(pugi::xml_node xe)
 //}
 
 bool ClickArea::PixelCheck(const oxygine::Vector2 &point) { 
-	if (Inside(point, _screenDots)) {
+	if (Inside(point - getPosition(), _dots)) {
 		return true;
 	}
 	return false;

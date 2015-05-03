@@ -63,7 +63,6 @@ namespace oxygine
 		stage->handleEvent(&me);
 	}
 
-
 	Input::Input()
 	{
 		addRef();

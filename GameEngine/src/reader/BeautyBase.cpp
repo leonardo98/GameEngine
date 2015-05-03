@@ -109,7 +109,7 @@ BeautyBase::BeautyBase(const std::string userString, const oxygine::Vector2 &pos
 BeautyBase::BeautyBase(pugi::xml_node xe) 
 	: _linked(NULL)
 {
-	setInputEnabled(false);
+	setTouchEnabled(false);
 	++__beauty_counter;
 	_parentBeauty = NULL;
 	setVisible(true);

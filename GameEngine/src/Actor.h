@@ -170,11 +170,6 @@ namespace oxygine
 		/**Sets transparency. if alpha is 0 actor and children are completely invisible, don't rendering and don't receive events.*/
 		void setAlpha(unsigned char alpha){_alpha = alpha;}
 		
-		/**Deprecated, use setTouchEnabled*/
-		void setInputEnabled(bool enabled) { setTouchEnabled(enabled); }
-		/**Deprecated, use setTouchChildrenEnabled*/
-		void setInputChildrenEnabled(bool enabled) { setTouchChildrenEnabled(enabled); }
-
 		/**Enables/Disables Touch events for Actor.*/
 		void setTouchEnabled(bool enabled) { _flags &= ~flag_touchEnabled; if (enabled) _flags |= flag_touchEnabled; }
 		/**Enables/Disables Touch events for children of Actor.*/

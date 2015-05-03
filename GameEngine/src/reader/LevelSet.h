@@ -10,7 +10,7 @@ DECLARE_SMART(LevelSet, spLevelSet);
 
 typedef std::set<std::string> NameList;
 
-class LevelSet : public oxygine::Actor
+class LevelSet : public virtual oxygine::Actor
 {
 private:
 	void BuildLinks();
@@ -19,6 +19,7 @@ private:
 	static void PushFileNamesToMap(const char *fileName, NameList &names);
 	static void GenOxygineResourceFile(NameList &files, const char *fileName);
 public:
+	virtual void TapEvent(const std::string &msg) {}
 	const std::string &Id() { return id; }
 	BeautyList beauties;
 	//void Draw();
@@ -29,7 +30,7 @@ public:
 	const LevelSet &operator=(const LevelSet &l);
 	LevelSet(const LevelSet &l);
 	~LevelSet();
-	LevelSet() {}
+	LevelSet() { setTouchEnabled(false); }
 	// search only from begining of UserString
 	void SelectByUserString(const std::string &keyWorld, BeautyList &list, bool appendAtEnd = false) const;
 	void SelectByUserString(const std::string &keyWorld, spBeautyBase &beauty) const;
