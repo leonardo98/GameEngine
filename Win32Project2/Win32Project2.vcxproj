@@ -21,7 +21,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v110</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -42,7 +42,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\Win32Project1\Debug;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\GameEngine\third_party\win32\libraries;C:\CppLib\SDL\VisualC\SDL\Win32\Release;C:\CppLib\SDL\VisualC\SDLmain\Win32\Release;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <LibraryPath>C:\Users\lenya_en\Documents\GitHub\assimp_origin\samples\DevIL\lib;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\AssimpLibrary\Debug;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\Win32Project1\Debug;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\GameEngine\third_party\win32\libraries;C:\CppLib\SDL\VisualC\SDL\Win32\Release;C:\CppLib\SDL\VisualC\SDLmain\Win32\Release;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
     <IncludePath>C:\CppLib\SDL\include;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\GameEngine\third_party\win32\pthreads\include;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\GameEngine\src;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -54,13 +54,14 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\lenya_en\Documents\GitHub\assimp_origin\include;C:\Users\lenya_en\Documents\GitHub\assimp_origin\samples\DevIL\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libjpeg.lib;libpng.lib;libzlib.lib;opengl32.lib;pthreadVCE2.lib;SDL2.lib;SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\Win32Project2\Debug\Oxygine_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>DevIL.lib;AssimpD.lib;libjpeg.lib;libpng.lib;libzlib.lib;opengl32.lib;pthreadVCE2.lib;SDL2.lib;SDL2main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;C:\Users\lenya_en\Documents\Visual Studio 2012\Projects\Demo1\Win32Project2\Debug\Oxygine_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

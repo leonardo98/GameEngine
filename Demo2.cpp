@@ -1,6 +1,5 @@
 #include "oxygine-framework.h"
-#include "reader/LevelSet.h"
-#include "buttons/TapButton.h"
+#include "skelet_models/Model3D.h"
 
 DECLARE_SMART(MainMenu, spMainMenu);
 
@@ -18,7 +17,7 @@ void game_preinit(oxygine::core::init_desc *desc)
 	oxygine::core::setClearColor(oxygine::Color(0, 0, 127, 255));
 }
 
-class MainObject : public virtual TapButtonInterface//SkeletalModel3D
+class MainObject : public virtual Model3D//SkeletalModel3D
 {
 public:
 	virtual void TapEvent(const std::string &msg)
@@ -29,8 +28,8 @@ public:
 	}
 	MainObject()
 	{
-		LoadFromFile("interface/description/mainscreen.xml");
-		AddButton(*this, "start_btn", this, "start");
+		LoadFromFile("C:/Dropbox/Projects/Moon/pers/walking.dae");
+		//AddButton(*this, "start_btn", this, "start");
 	}
 };
 
