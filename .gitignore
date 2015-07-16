@@ -57,3 +57,6 @@ GameEngine/SDL/win32/Debug_vs2010/vc110.idb
 GameEngine/SDL/win32/oxygine_vs2010.vcxproj.filters
 GameEngine/SDL/win32/Debug_vs2010/vc110.idb
 GameEngine/SDL/win32/oxygine_vs2010.vcxproj.filters
+*.idb
+*.unsuccessfulbuild
+*.opensdf

@@ -52,6 +52,9 @@
     <Filter Include="src\buttons">
       <UniqueIdentifier>{2d2dc7da-96ac-4a30-acb1-7060c617f08e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\skelet_models">
+      <UniqueIdentifier>{f56bf542-5fd3-46d3-9246-1e6803d41c44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\math\AffineTransform.cpp">

@@ -1,48 +1,52 @@
-//
-// Step#1 ¬ведение.
-//
-// ¬от и € решил написать свой мега-супер движек дл€ 2D игр!
-// 
-// ќсновна€ проблема в том, что все уже существующие писал не € *smile*.
-// ≈сть и другие причины создать свой движек: у мен€ большой опыт колупани€ и работы с разными чужимы 
-// движками и фреймворками, обща€ черта их в том что они слишком программерские, 
-// направленые на что-то одно и, как правило, требуют большого времени 
-// на создание сложных и нетипичных вещей, т.е. либо нужно работать на низкому уровне, либо на высоком 
-// и сложно использовать оба уровн€ одновременно.
-// Ћибо создают лишние обертки, типа своего €зыка дл€ шейдеров.
-// “ак же сильно напр€гает высокий порог вхождени€. 
-// ¬се это € хочу избежать.
-//
-// ќсновные предполагаемые фичи:
-// - низкий порог вхождени€
-// - с++
-// - OpenGL
-// - GLSL
-// - спрайты, меши, твины
-// - автоматизаци€ создани€ GUI
-// - анимации(спрайтовые и на основе твинов)
-// - автоматизаци€ работы с ресурсами(пользователь о них не будет знать)
-// - загрузка данных в несколько потоков
-// - физика(box2d)
-// 
+пїњ#include "oxygine-framework.h"
+#include "buttons/TapButton.h"
 
-// »так, пристуим: пример самого простого приложени€ на моем движке должен выгл€деть так
+DECLARE_SMART(MainMenu, spMainMenu);
 
-#include "GameEngine/GameEngine.h"
-
-void Start()
+// define window option
+void game_preinit(oxygine::core::init_desc *desc)
 {
-	::Log("Start!\n");
-	::SetWindowSize(800, 600);
-	::ShowMessage("Hello world!");
+	if (desc)
+	{
+		desc->w = 1064;
+		desc->h = 600;
+#ifdef _DEBUG
+		desc->showDebugActor = true;
+#else
+		desc->showDebugActor = false;
+#endif
+	}
+	oxygine::core::setClearColor(oxygine::Color(0, 0, 127, 255));
 }
-// Ёто все!
-// “ут вполне очевидно что должно произойти, а именно: 
-// создеем окно нужного размера, показываем сообщение.
-// „тобы это работало так, как ожидаетс€, нужно написать немного кода,
-// но это будет уже другой файл.
 
-// ѕ.—. данный файл не случайно назван Demo1.cpp - это будет самый простой пример кода, работающий с будущим движком.
+class MainMenu : public virtual TapButtonInterface
+{
+public:
+	virtual void TapEvent(const std::string &msg)
+	{
+		if (msg == "start")
+		{
+			// todo: do some usefull staff
+		}
+	}
+	MainMenu()
+	{
+		LoadFromFile("interface/description/mainscreen.xml");
+		AddButton(*this, "start_btn", this, "start");
+	}
+};
 
+// game init at start
+void game_init()
+{
+	oxygine::getStage()->addChild(new MainMenu());
+}
 
+void game_destroy()
+{
+}
 
+void game_update()
+{
+
+}
