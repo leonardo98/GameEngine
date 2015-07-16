@@ -25,7 +25,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v110_xp</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -183,6 +183,7 @@
     <ClCompile Include="..\..\src\res\ResStarlingAtlas.cpp" />
     <ClCompile Include="..\..\src\Serializable.cpp" />
     <ClCompile Include="..\..\src\Serialize.cpp" />
+    <ClCompile Include="..\..\src\skelet_models\MathFunc.cpp" />
     <ClCompile Include="..\..\src\SlidingActor.cpp" />
     <ClCompile Include="..\..\src\Sprite.cpp" />
     <ClCompile Include="..\..\src\Stage.cpp" />
@@ -304,6 +305,9 @@
     <ClInclude Include="..\..\src\RootActor.h" />
     <ClInclude Include="..\..\src\Serializable.h" />
     <ClInclude Include="..\..\src\Serialize.h" />
+    <ClInclude Include="..\..\src\skelet_models\AnimationController.h" />
+    <ClInclude Include="..\..\src\skelet_models\MathFunc.h" />
+    <ClInclude Include="..\..\src\skelet_models\Model3D.h" />
     <ClInclude Include="..\..\src\SlidingActor.h" />
     <ClInclude Include="..\..\src\Sprite.h" />
     <ClInclude Include="..\..\src\Stage.h" />

@@ -361,6 +361,9 @@
     <ClCompile Include="..\..\src\buttons\TapButton.cpp">
       <Filter>src\buttons</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\skelet_models\MathFunc.cpp">
+      <Filter>src\skelet_models</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\closure\closure.h">
@@ -773,6 +776,15 @@
     </ClInclude>
     <ClInclude Include="..\..\src\buttons\TapButton.h">
       <Filter>src\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\skelet_models\AnimationController.h">
+      <Filter>src\skelet_models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\skelet_models\MathFunc.h">
+      <Filter>src\skelet_models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\skelet_models\Model3D.h">
+      <Filter>src\skelet_models</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
